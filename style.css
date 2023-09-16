@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    ---fundo:#070e37;
+    ---relogio: #32c9fc;
+    ---night-fundo: url(img/noite.webp);
+}
+body, html{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: black;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(---fundo);
+    background-image: var(---night-fundo);
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#horas, #minutos, #segundos{
+    background-color: var(---relogio);
+    height: 40vh;
+    width: 20vw;
+    margin: 0 8px;
+    border-radius: 15px;
+    opacity: 60%;
+}
+
+main p{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12vw;
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        overflow: visible;
+        flex-direction: column;
+        background-color: black;
+    }
+
+    #horas, #minutos, #segundos{
+        height: 20vh;
+        width: 50vw;
+        margin: 8px 0px;
+    }
+    
+    main p{
+        font-size: 16vw; 
+    }
+}
