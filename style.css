@@ -8,6 +8,8 @@
     ---fundo:#070e37;
     ---relogio: #32c9fc;
     ---night-fundo: url(img/noite.webp);
+    ---tarde-fundo: url(img/tarde.jpg);
+    ---dia-fundo: url(img/dia.jpg);
 }
 body, html{
     height: 100vh;
@@ -32,6 +34,16 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+
+.noite{
+    background-image: var(---night-fundo);
+}
+.tarde{
+    background-image: var(---tarde-fundo);
+}
+.dia{
+    background-image: var(---dia-fundo);
 }
 
 #horas, #minutos, #segundos{
